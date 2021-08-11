@@ -6,4 +6,17 @@
 
 def fun_eggcartons(eggs):
 	# your code goes here
-	return 1
+	eggs=abs(eggs)
+	
+	if(eggs<=12 and eggs>=1):
+		return 1
+	elif(eggs==0):
+		return 0 
+
+	elif(eggs%12==0):
+		return eggs//12
+	else:
+		x=round(eggs//12)+1
+
+		print(x)
+		return x
