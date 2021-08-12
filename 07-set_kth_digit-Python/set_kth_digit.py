@@ -15,6 +15,7 @@ def fun_set_kth_digit(n, k, d):
 	res = 0
 	while(n > 0):
 		r = n % 10
+		x=n
 		if count == k:
 			res = res + (d * (10 ** count))
 		else:
