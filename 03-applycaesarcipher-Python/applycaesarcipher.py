@@ -11,7 +11,37 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	res = ""
+	for i in range(len(msg)):
+		if(msg[i].isupper()):
+			x = ord(msg[i])
+			x = x+shift
+			if(x>90):
+				x = x-26
+				res = res+chr(x)
+			elif(x<65):
+				x = x+26
+				res = res+chr(x)
+			else:
+				res = res+chr(x)
+		elif(msg[i].islower()):
+			x = ord(msg[i])
+			x = x+shift
+			if(x>122):
+				x = x-26
+				res = res+chr(x)
+			elif(x<97):
+				x = x+26
+				res = res+chr(x)
+			else:
+				res = res+chr(x)
+		else:
+			res = res+msg[i]
+
+
+
+	return res
+
 
 
 
