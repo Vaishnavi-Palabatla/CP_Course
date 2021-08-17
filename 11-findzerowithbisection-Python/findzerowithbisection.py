@@ -9,3 +9,10 @@ def findzerowithbisection(x, epsilon):
 	# don't change these values
 	# epsilon
 	# your code starts here
+	numGuesses = 0
+	ans = 0.0
+	while abs(ans**2 - x) >= epsilon and ans <= x:
+		ans += 0.00001
+		numGuesses += 1
+	print ('numGuesses =', numGuesses)
+	return 0
