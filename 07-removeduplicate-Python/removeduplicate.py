@@ -5,4 +5,9 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	x=[]
+	for i in text:
+		if i not in x:
+			x.append(i)
+
+	return ''.join(x)
