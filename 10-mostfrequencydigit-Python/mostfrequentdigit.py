@@ -4,4 +4,16 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	n=str(n)
+	l=[]
+	for i in n:
+		if(i not in l):
+			l.append(i)
+	l.sort()
+	d={}
+	for i in l:
+		d[i]=n.count(i)
+	y=sorted(d.items(), key=lambda x:(x[1]), reverse=True)
+	print(y)
+	return int(y[0][0])
+print(mostfrequentdigit(5312312355565))	
