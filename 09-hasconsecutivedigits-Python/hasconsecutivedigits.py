@@ -4,4 +4,18 @@
 
 def hasconsecutivedigits(n):
 	# your code goes here
-	pass
+	j=0
+	count=0
+	n=str(abs(n))
+	for i in range(len(n)):
+		
+		if(n[i] ==j):
+			return True
+		j=n[i]
+	return False
+
+print(hasconsecutivedigits(5231123123123))
+
+
+
+	# pass
