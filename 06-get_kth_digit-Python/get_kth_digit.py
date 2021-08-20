@@ -6,4 +6,18 @@
 
 
 def fun_get_kth_digit(digit, k):
-	return 0
+	x=len(str(digit))
+	if(k>(x-1)):
+		return 0
+	else:
+		if(k==0):
+			# digit=digit//10**(k)
+			digit1=abs(digit)%10**(k+1)
+			print(digit1)
+		else:
+
+			digit=digit//10**(k)
+			digit1=digit%10**(k)
+			print(digit1)
+	return digit1
+print(fun_get_kth_digit(789,0))
