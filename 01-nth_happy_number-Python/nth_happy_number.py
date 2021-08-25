@@ -14,6 +14,43 @@
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
 
+def sod(n):
+	sum=0
+	while(n>0):
+		rem=n%10
+		n=n//10
+		sum=sum+rem**2
+	return sum
+
+def ishappynumber(n):
+	# your code goes here
+	count=0
+	x=0
+	if(n<1):
+		return False
+	else:
+		x=n
+		while(True):
+			x=sod(x)
+			# print(x)
+			
+			if(len(str(x))==1):
+				if(x==1):
+					return True
+				else:
+					return False
 
 def nth_happy_number(n):
-	return 0
+	l=[]
+	for i in range(1,n*5):
+		print(i)
+		if(ishappynumber(i)==True):
+			
+			l.append(i)
+			
+			if(len(l)==n):
+				print(len(l),n)
+				return l[-1]
+
+	
+print(nth_happy_number(7))
