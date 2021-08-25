@@ -9,4 +9,12 @@
 
 def largestperfectsquare(n):
 	# your code goes here
-	pass
+	for i in range(1,n+1):
+		x=i**2
+		
+		if(x>n):
+			return d
+		elif(x==n):
+			return x
+		d=x
+	# return 
