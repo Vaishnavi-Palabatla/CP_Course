@@ -16,7 +16,31 @@
 # assert(ishappynumber(98) == False)
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
+def sod(n):
+	sum=0
+	while(n>0):
+		rem=n%10
+		n=n//10
+		sum=sum+rem**2
+	return sum
 
 def ishappynumber(n):
 	# your code goes here
-	pass
+	count=0
+	x=0
+	if(n<1):
+		return False
+	else:
+		x=n
+		while(True):
+			x=sod(x)
+			print(x)
+			if(len(str(x))==1):
+				if(x==1):
+					return True
+				else:
+					return False
+			# count=count+1
+		# return True
+	# pass
+print(ishappynumber(98))
