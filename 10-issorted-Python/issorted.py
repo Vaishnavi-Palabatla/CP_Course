@@ -7,4 +7,29 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	# j=0
+	# c1=1
+	# c=1
+	# for i in a:
+	# 	if(i<j):
+	# 		c1=c1+1
+	# 	if(i>j):
+	# 		c=c+1
+	# 	print(i,j,c,c1)
+	# 	j=i
+	# if(c==len(a) or c1==len(a)):
+	# 	return True
+	# else:
+	# 	return False
+	count=0
+	for i in range(len(a)):
+		if(i==len(a)-1):
+			break
+		if(a[i]>a[i+1]):
+			count+=1
+	if(count==0):
+		return True
+	elif(count==len(a)-1):
+		return True
+	return False
+	
