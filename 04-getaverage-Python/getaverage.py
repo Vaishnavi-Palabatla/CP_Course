@@ -10,5 +10,19 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+	y=[]
+	x=s.split(",")
+	print(x)
+	for i in x:
+		print(i,i.isnumeric())
+
+		if(i.isnumeric()):
+			y.append(int(i))
+	print(y)
+	if(len(y)==0):
+
+		return 0.0
+	else:
+		print(sum(y)/len(y))
+		return float(sum(y)/len(y))
 
