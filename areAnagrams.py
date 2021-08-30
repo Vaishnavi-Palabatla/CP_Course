@@ -12,6 +12,22 @@
 
 def areAnagrams(s1, s2):
     # Your code goes here...
-    pass
+    # pass
+    s1=s1.lower()   
+    s2=s2.lower()
+    l=0
+    k=0
+    
+    if(len(s1)!=len(s2)):
+        return False
+    for i in range(len(s1)):
+        
+        l=l+s1.count(s1[i])
+        k=k+s2.count(s2[i])
+    # print(l,k)
+    if(l==k):
+        return True
+    else:
+        return False
 
-# write your test cases here...
+
