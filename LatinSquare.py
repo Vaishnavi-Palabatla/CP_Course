@@ -9,4 +9,18 @@
 
 def isLatinSquare(lst):
     # Your code goes here...
-    pass
+    d = {}
+    for i in lst:
+        temp = i
+        for j in range(len(lst[0])):
+            temp2 = i[:j] + i[j+1:]
+            if i[j] in temp2:
+                return False
+            if j in d:
+                if i[j] in d[j]:
+                    return False
+                else:
+                    d[j].append(i[j])
+            else:
+                d[j] = [i[j]]
+    return True
